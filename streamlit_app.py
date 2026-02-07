@@ -300,6 +300,3 @@ try:
         st.info("Model does not expose importances or coefficients.")
 except Exception as e:
     st.error(f"Could not extract importances: {e}")
-
-st.markdown("---")
-st.caption("Streamlit front-end for running predictions against saved `.pkl` models. Uses simple StandardScaler fit on the uploaded data for numeric columns (so results are for demonstration/inference; for production, save a preprocessor at training time).")

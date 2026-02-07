@@ -36,14 +36,14 @@ The following table summarizes the evaluation metrics for each model:
 
 **Note:** For medical data, Recall (Sensitivity) is the critical metric as it measures the model's ability to identify positive cases. Missing a positive case (false negative) can be dangerous in medical diagnosis.
 
-| Model Name                     | Recall | Observation                                                                                 |
-|--------------------------------|--------|----------------------------------------------------------------------------------------------|
-| Logistic Regression            | 0.4694 | **Unacceptable** - Only 46.94% recall; misses nearly half of positive cases; unsafe for medical use |
-| Decision Tree Classifier       | 0.8725 | **Adequate** - 87.25% recall; acceptable but still misses ~12% of cases; use with caution |
-| K-Nearest Neighbor Classifier  | 0.9594 | **Excellent** - 95.94% recall; highly reliable at detecting positive cases; recommended for deployment |
-| Naive Bayes Classifier         | 0.7144 | **Poor** - 71.44% recall; misses ~28% of positive cases; not suitable for medical applications |
-| Ensemble Model - Random Forest | 0.9631 | **Excellent** - 96.31% recall; superior sensitivity with minimal false negatives; highly recommended |
-| Ensemble Model - XGBoost       | 0.9712 | **Best** - 97.12% recall; highest sensitivity; catches 97% of positive cases; optimal for medical diagnosis |
+| Model Name                     | Observation                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| Logistic Regression            | **Unacceptable** - Only 46.94% recall; misses nearly half of positive cases; unsafe for medical use |
+| Decision Tree Classifier       | **Adequate** - 87.25% recall; acceptable but still misses ~12% of cases; use with caution |
+| K-Nearest Neighbor Classifier  | **Excellent** - 95.94% recall; highly reliable at detecting positive cases; recommended for deployment |
+| Naive Bayes Classifier         | **Poor** - 71.44% recall; misses ~28% of positive cases; not suitable for medical applications |
+| Ensemble Model - Random Forest | **Excellent** - 96.31% recall; superior sensitivity with minimal false negatives; highly recommended |
+| Ensemble Model - XGBoost       | **Best** - 97.12% recall; highest sensitivity; catches 97% of positive cases; optimal for medical diagnosis |
 
 ---
 

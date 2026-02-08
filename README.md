@@ -60,7 +60,7 @@ python -m venv .venv
 pip install -r requirements.txt
 
 # 4. Train and save models
-python ml_models.py
+python model_train.py
 
 # 5. Launch the Streamlit app
 streamlit run streamlit_app.py

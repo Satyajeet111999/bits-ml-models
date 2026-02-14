@@ -291,7 +291,12 @@ try:
         fig = px.bar(df_fi, x="importance", y="feature", orientation="h")
         st.plotly_chart(fig, use_container_width=True)
     elif hasattr(model, "coef_"):
-        coefs = np.ravel(model.coef_)
+        coefs = model.coef_
+        # Handle multiclass case: take mean of absolute coefficients across classes
+        if coefs.ndim == 2:
+            coefs = np.mean(np.abs(coefs), axis=0)
+        else:
+            coefs = np.ravel(coefs)
         features = X_proc.columns
         df_coefs = pd.DataFrame({"feature": features, "coef": coefs}).sort_values("coef", key=abs, ascending=False).head(30)
         fig = px.bar(df_coefs, x="coef", y="feature", orientation="h")
